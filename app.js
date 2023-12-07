@@ -10,6 +10,8 @@ app.use(bodyParser.json());
 app.use("/api", sensordataRoutes);
 app.use("/exp", expDataRoutes);
 
+const port=process.env.PORT || 3456;
+
 mongoose.set('strictQuery', false);
 mongoose
     .connect(
@@ -17,7 +19,7 @@ mongoose
     )
     .then((result) => {
         console.log("app is running...")
-        app.listen(3456);
+        app.listen(port);
     }).catch((err) => {
         console.log(err);
     })
