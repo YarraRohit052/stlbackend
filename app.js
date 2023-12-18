@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use("/api", sensordataRoutes);
 app.use("/exp", expDataRoutes);
 
-const port=process.env.PORT || 3456;
+const port=process.env.PORT || 1000;
 
 mongoose.set('strictQuery', false);
 mongoose
